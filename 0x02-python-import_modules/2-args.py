@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-if __name__ == '__main__':
+"""if __name__ == '__main__':"""
     import sys
-    i = 1
     if len(argv) = 1:
         print('{} argument:'.format(len(argv)))
     elif len(argv) = 0:
