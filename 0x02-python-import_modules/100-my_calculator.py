@@ -10,16 +10,16 @@ if __name__ == "__main__":
     
     a = int(argv[1])
     b = int(argv[3])
-    op = ['+', '-', '*', '/']
+    op = argv[2]
 
-    if argv[2] not in op:
+    if op == '+':
+        print('{} {} {} = {}'.format(a, op, b, add(a, b)))
+    elif op == '-':
+        print('{} {} {} = {}'.format(a, op, b, sub(a, b)))
+    elif op == '*':
+        print('{} {} {} = {}'.format(a, op, b, mul(a, b)))
+    elif op == '/':
+        print('{} {} {} = {}'.format(a, op, b, div(a, b)))
+    else:
         print('Unknown operator. Available operators: +, -, * and /')
         sys.exit(1)
-    elif argv[2] == '+':
-        print('{} {} {} = {}'.format(a, argv[2], b, add(a, b)))
-    elif argv[2] == '-':
-        print('{} {} {} = {}'.format(a, argv[2], b, sub(a, b)))
-    elif argv[2] == '*':
-        print('{} {} {} = {}'.format(a, argv[2], b, mul(a, b)))
-    elif argv[2] == '/':
-        print('{} {} {} = {}'.format(a, argv[2], b, div(a, b)))
