@@ -4,6 +4,5 @@ def search_replace(my_list, search, replace):
     for i in range(len(new_list) - 1):
         for elm[i] in new_list:
             if elm[i] == search:
-                elm[i] = replace
+                new_list.insert(i, search)
     return new_list
-
