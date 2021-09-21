@@ -4,4 +4,7 @@ def best_score(a_dictionary):
     for k in a_dictionary:
         if a_dictionary[k] > big:
             big = a_dictionary[k]
-    return ([k for k in a_dictionary if a_dictionary[k] == big else None])
+    if len(a_dictionary) == 0:
+        return None
+    else:
+        return (k for k in a_dictionary if a_dictionary[k] == big)
