@@ -1,8 +1,3 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    a = []
-    for elm in matrix:
-        a.append(elm**2)
-    return a
-        
-
+    return [list(map(lambda x: x*x, for i in matrix))]
