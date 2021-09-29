@@ -49,7 +49,7 @@ class Square:
             self.__position = value
     """@position.setter
     def position(self, value):
-        """To set position"""
+        ""To set position""
         if type(value) is not tuple or \
                 len(value) != 2 or \
                 type(value[0]) is not int or value[0] < 0 or \
