@@ -1,0 +1,69 @@
+=========================
+:::Using 3-say_my_name.py
+=========================
+
+The 3-say_my_name module has only one function::
+```
+say_my_name(first_name, last_name="")
+```
+
+:::How to Use:::
+================
+
+say_my_name(first_name, last_name="") accepts two sting arguments as first_name and last_name and prints them out starting with ```My namae is```
+
+:::Tests:::
+===========
+
+Import function from the module:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Test two strings:
+	>>> say_my_name('John', 'Doe')
+	My name is John Doe
+
+
+Test one string (funcion gives last name as ""):
+	>>> say_my_name('John')
+	My name is John 
+
+Test empty arguments:
+	Traceback (most recent call last):
+  	...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Test arg one as type int:
+	>>> say_my_name(15, 'Doe')
+	Traceback (most recent call last):
+  	...
+	TypeError: first_name must be a string
+
+Test arg two as type int:
+	>>> say_my_name('John', 15)
+	Traceback (most recent call last):
+  	...
+	TypeError: last_name must be a string
+
+Test args one as float:
+	>>> say_my_name(15.3, 'Doe')
+	Traceback (most recent call last):
+  	...
+	TypeError: first_name must be a string
+
+Test arg one as tuple of strings:
+	>>> say_my_name(('John', 'Kofi'), 'Doe')
+	Traceback (most recent call last):
+  	...
+	TypeError: first_name must be a string
+
+Test arg one as list of strings:
+	>>> say_my_name(['John', 'Kofi'], 'Doe')
+	Traceback (most recent call last):
+  	...
+	TypeError: first_name must be a string
+
+Test args as a dict:
+	>>> say_my_name({'first_name': 'John', 'last_name': 'Doe'})
+	Traceback (most recent call last):
+  	...
+	TypeError: first_name must be a string
