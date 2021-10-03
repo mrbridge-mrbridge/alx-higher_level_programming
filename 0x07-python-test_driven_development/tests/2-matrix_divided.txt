@@ -1,0 +1,118 @@
+===================
+2-matrix_divided.py
+===================
+
+The 2-matrix_divided module has only one function::
+```
+matrix_divided(matrix, div)
+```
+
+:::How to Use:::
+================
+matrix_divided(matrix, div) divides each element of the matrix by div
+
+:::Tests:::
+===========
+
+Import function from the module:
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Test matrix elements as integers:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]], 3)
+	[[2.0, 2.33], [0.67, 0.67], [0.33, 1.33]]
+
+Test matrix elements as floats:
+	>>> matrix_divided([[6.1, 7.1], [2.2, 2.2], [1.9, 4.9]], 3)
+	[[2.03, 2.37], [0.73, 0.73], [0.63, 1.63]]
+
+Test different row sizes among matrix elements:
+	>>> matrix_divided([[6, 7], [2], [1]], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: Each row of the matrix must have the same size
+
+Test matrix elements as strings:
+	>>> matrix_divided([['richard', 7], [2, 2], [1, 4]], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test div as float:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]], 3.6)
+	[[1.67, 1.94], [0.56, 0.56], [0.28, 1.11]]
+
+Test div as string:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]], 'osei')
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
+
+Test div as variable:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]], osei)
+	Traceback (most recent call last):
+	...
+	NameError: name 'osei' is not defined
+
+Test div as zero:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]], 0)
+	Traceback (most recent call last):
+	...
+	ZeroDivisionError: division by zero
+
+Test div as missing:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]])
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test matrix as empty:
+	>>> matrix_divided([], 3)
+	[]
+
+Test matrix as missing:
+	>>> matrix_divided(3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Test multiple matrix:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]], [2, 2], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() takes 2 positional arguments but 3 were given
+
+Test div as matrix:
+	>>> matrix_divided([[6, 7], [2, 2], [1, 4]], [2, 2])
+	Traceback (most recent call last):
+	...
+	TypeError: div must be a number
+
+Test no arguments:
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+Test matrix as list:
+	>>> matrix_divided([1, 3], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test matrix as list of tuple:
+	>>> matrix_divided([(1, 3)], 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test matrix as tuple of lists:
+	>>> matrix_divided(([6, 7], [2, 2], [1, 4]), 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Test matrix as tuple of tuple:
+	>>> matrix_divided(((6, 7), (2, 2), (1, 4)), 3)
+	Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
