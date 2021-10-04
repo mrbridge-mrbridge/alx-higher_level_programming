@@ -1,0 +1,94 @@
+=========================
+:::Using 5-text_indentation.py
+=========================
+
+The 5-text_indentation.py module has only one function::
+```
+text_indentation(text)
+```
+
+:::How to Use:::
+================
+The text_indentation(text) accepts a string and prints it out. Whenever a character is any of: ., ? and :, the function prints 2 new lines after printing the special character.
+
+:::Tests:::
+===========
+
+Import function from the module:
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Test text as string with :, ., ?:
+	>>> text_indentation('Ric: har?d? os.er')
+	Ric:
+	<BLANKLINE>
+	har?
+	<BLANKLINE>
+	d?
+	<BLANKLINE>
+	os.
+	<BLANKLINE>
+	er
+
+Test text as integer:
+	>>> text_indentation(14)
+	Traceback (most recent call last):
+  	...
+	TypeError: text must be a string
+
+Test text as float:
+	>>> text_indentation(14.55)
+	Traceback (most recent call last):
+  	...
+	TypeError: text must be a string
+
+Test text as empty:
+	>>> text_indentation()
+	Traceback (most recent call last):
+  	...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test text as two string arguments:
+	>>> text_indentation('richard', 'osei')
+	Traceback (most recent call last):
+  	...
+	TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Test text as tuple of one string member:
+	>>> text_indentation(('richard',))
+	Traceback (most recent call last):
+  	...
+	TypeError: text must be a string
+
+Test text as list of one string member:
+	>>> text_indentation(['richard'])
+	Traceback (most recent call last):
+  	...
+	TypeError: text must be a string
+
+Test BLANKLINE:
+	>>> text_indentation('richard?')
+	richard?
+	<BLANKLINE>
+
+Test spaces in front of text:
+	>>> text_indentation('  richard')
+	richard
+
+Test text as only special characters :, ., and ?:
+	>>> text_indentation('?.:')
+	?
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+
+Test for newline among special characters:
+	>>> text_indentation('?.\n:')
+	?
+	<BLANKLINE>
+	.
+	<BLANKLINE>
+	<BLANKLINE>
+	:
+	<BLANKLINE>
