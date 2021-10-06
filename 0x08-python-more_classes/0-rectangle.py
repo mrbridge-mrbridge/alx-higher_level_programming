@@ -2,5 +2,5 @@
 """This module defines an empty class"""
 
 class Rectangle:
-    """A class Rectangle"""
+    """An empty class Rectangle"""
     pass
