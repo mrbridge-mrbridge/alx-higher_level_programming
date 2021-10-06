@@ -10,13 +10,13 @@ class Rectangle:
         Instantiation of class with
         width and height
         """
-        self.__width__ = width
-        self.__height__ = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
         """An instance attribute to retrieve width"""
-        self.__width__ = width
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -27,13 +27,13 @@ class Rectangle:
         if value < 0:
             raise ValueError('width must be >= 0')
 
-        self.__width__ = value
+        self.__width = value
 
     @property
     def height(self):
         """An instance attribute to retrieve height"""
 
-        self.__height__ = height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -44,4 +44,4 @@ class Rectangle:
         if value < 0:
             raise ValueError('height must be >= 0')
 
-        self.__height__ = value
+        self.__height = value
