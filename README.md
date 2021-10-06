@@ -1,4 +1,4 @@
-# This Repository Is For High-Level Programming
+# High-Level Programming
 ```
 By: Richard Osei
 ```
