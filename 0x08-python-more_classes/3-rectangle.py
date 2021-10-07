@@ -57,7 +57,9 @@ class Rectangle:
         returns a string of rectangle
         in # characters
         """
+        ret = ''
         if self.__height == 0 or self.__width == 0:
             return ()
         for i in range(self.__height):
-                return ('#' * self.__width + '\n')
+                ret.append('#' * self.__width + '\n')
+        return ret
