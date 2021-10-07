@@ -4,11 +4,10 @@
 
 class Rectangle:
     """A new class classed Rectangle"""
-    
+
     def __init__(self, width=0, height=0):
         """
-        Instantiation of class with
-        width and height
+        Instantiation of class Rectangle
         """
         self.width = width
         self.height = height
