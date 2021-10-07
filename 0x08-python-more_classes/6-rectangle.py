@@ -4,6 +4,8 @@
 
 class Rectangle:
     """A new class classed Rectangle"""
+    
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -11,6 +13,7 @@ class Rectangle:
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -60,7 +63,7 @@ class Rectangle:
         ret = ''
         if self.__height != 0 and self.__width != 0:
             ret += "\n".join("#" * self.__width
-                                for j in range(self.__height))
+                    for j in range(self.__height))
         return ret
 
     def __repr__(self):
@@ -69,3 +72,8 @@ class Rectangle:
         for reproduction
         """
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+
+    def __del__(self):
+        """prints a string when an instance has been deleted"""
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
