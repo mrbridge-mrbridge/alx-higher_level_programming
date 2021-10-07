@@ -6,7 +6,8 @@ class Rectangle:
     """A new class classed Rectangle"""
     
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """
         Instantiation of class Rectangle
@@ -62,7 +63,7 @@ class Rectangle:
         """
         ret = ''
         if self.__height != 0 and self.__width != 0:
-            ret += "\n".join("#" * self.__width
+            ret += "\n".join(str(self.print_symbol) * self.__width
                     for j in range(self.__height))
         return ret
 
