@@ -4,16 +4,16 @@ import json
 
 
 class Base:
-    """The class Base """
+    """The class Base"""
     __nb_objects = 0
 
     def __init__(self, id=None):
         """initialises the class base"""
-        if id != None:
-            self.id = id
-        else:
+        if id is None:
             Base.__nb_objects += 1
             self.id = self.__nb_objects
+        else:
+            self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):
