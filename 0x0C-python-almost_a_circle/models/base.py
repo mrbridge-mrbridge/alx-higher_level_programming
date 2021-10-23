@@ -21,7 +21,7 @@ class Base:
         returns json string representation of 
         list_dictionaries
         """
-        if len(list_dictionaries) = 0:
+        if len(list_dictionaries) == 0:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
