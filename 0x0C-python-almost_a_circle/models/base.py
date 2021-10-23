@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """Module contains the Base class"""
 
+
 class Base:
     """The class Base """
-
     __nb_objects = 0
 
     def __init__(self, id=None):
