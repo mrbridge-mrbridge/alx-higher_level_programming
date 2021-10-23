@@ -34,7 +34,7 @@ class Base:
         returns the pyhton dict of json string
         """
         if json_string is None or len(json_string == 0):
-            return "[]"
+            return []
         else:
             return json.loads(json_string)
 
