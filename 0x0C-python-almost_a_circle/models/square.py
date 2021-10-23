@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """this module is about a square"""
-
+from models.rectange import Rectangle
 
 class Square(Rectangle):
     """The Square class"""
