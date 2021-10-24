@@ -52,6 +52,7 @@ class Base:
                 list_objs = [elm.to_dictionary() for elm in list_objs]
                 f.write(Base.to_json_string(list_objs))
 
+    @classmethod
     def create(cls, **dictionary):
         """
         returns an instance with all 
