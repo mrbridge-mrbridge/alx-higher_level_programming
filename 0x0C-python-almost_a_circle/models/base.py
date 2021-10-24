@@ -51,3 +51,15 @@ class Base:
             else:
                 list_objs = [elm.to_dictionary() for elm in list_objs]
                 f.write(Base.to_json_string(list_objs))
+
+    def create(cls, **dictionary):
+        """
+        returns an instance with all 
+        attributes already set
+        """
+        if cls.__name__ is "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ is "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
