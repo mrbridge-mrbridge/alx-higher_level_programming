@@ -64,3 +64,16 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of instances
+        """
+        file_name = cls.__name__ + ".json"
+        try:
+            with open(file_name, "r") as f:
+                list_dicts = Base.from_json_string(f.read())
+                return [cls.create(**i) for i in list_dicts]
+        except IOError:
+            return []
