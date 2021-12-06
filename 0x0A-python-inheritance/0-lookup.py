@@ -7,4 +7,3 @@ def lookup(obj):
         available attributes and methods of an obj
     """
     return (dir(obj))
-
