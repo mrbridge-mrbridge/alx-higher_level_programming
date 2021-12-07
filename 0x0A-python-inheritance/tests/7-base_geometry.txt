@@ -9,6 +9,10 @@ First import the module and class:
 
 	>>> bg = BaseGeometry()
 
+``````````````````````````````````````````````````````````````
+testing instance method:: `integer_validator`
+``````````````````````````````````````````````````````````````
+
 Check value as positive int:
 	>>> bg.integer_validator("my_int", 12)
 
@@ -66,3 +70,18 @@ Check that no argument is passed:
 	>>> bg.integer_validator()
 	Traceback (most recent call last):
 	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+```````````````````````````````````````````````````````````````````
+testing instance method::: `area`
+```````````````````````````````````````````````````````````````````
+
+Call area method must raise exception:
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+Passing an argument to area method:
+	>>> bg.area(4)
+	Traceback (most recent call last):
+	TypeError: area() takes 1 positional argument but 2 were given
