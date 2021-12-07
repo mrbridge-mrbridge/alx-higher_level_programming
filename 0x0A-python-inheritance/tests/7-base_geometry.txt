@@ -27,6 +27,11 @@ Check value as negtative int:
 	Traceback (most recent call last):
 	ValueError: distance must be greater than 0
 
+Check value as None:
+	>>> bg.integer_validator("my_int", None)
+	Traceback (most recent call last):
+	TypeError: my_int must be an integer
+
 Check value as boolean:
 	>>> bg.integer_validator("my_int", True)
 	Traceback (most recent call last):
@@ -41,6 +46,16 @@ Check value as a single list:
 	>>> bg.integer_validator("my_int", [2, 3])
 	Traceback (most recent call last):
 	TypeError: my_int must be an integer
+
+Check value as a tuple:
+        >>> bg.integer_validator("my_int", (2,))
+        Traceback (most recent call last):
+        TypeError: my_int must be an integer
+
+Check value as a single dict:
+        >>> bg.integer_validator("my_int", {2, 3})
+        Traceback (most recent call last):
+        TypeError: my_int must be an integer
 
 Check that no argument is provided as value:
 	>>> bg.integer_validator("my_int")
