@@ -7,7 +7,7 @@ class MyInt(int):
     def __eq__(self, value):
         """== becomes !="""
         return int(self) != value
-        
+
     def __ne__(self, value):
         """!= becomes =="""
         return int(self) == value
