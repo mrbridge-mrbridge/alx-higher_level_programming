@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""
-    writes a string to a text file (UTF8) and returns
-the number of characters written
-    must use the with statement
-    should create the file if doesn’t exist
+"""Writes a string to a text file (UTF8) and returns
+    the number of characters written
+    Must use the with statement
+    Should create the file if doesn’t exist
 """
 
 
