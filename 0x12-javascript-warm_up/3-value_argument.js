@@ -1,8 +1,8 @@
 #!/usr/bin/node
 'use strict';
 let ag = process.argv[2];
-if (ag === undefined) {
+if(ag === undefined){
 	console.log('No argument');
-} else {
+}else{
 	console.log(ag);
 }
