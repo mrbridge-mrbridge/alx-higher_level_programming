@@ -9,11 +9,11 @@ module.exports = class Square extends Square1 {
 
   charPrint (c) {
     for (let i = 0; i < this.size; i++) {
-    	if (c) {
-          console.log('C'.repeat(this.size));
-	} else {
-          console.log('X'.repeat(this.size));
-	}
+      if (c) {
+        console.log(c.repeat(this.size));
+      } else {
+        console.log('X'.repeat(this.size));
+      }
     }
   }
 };
