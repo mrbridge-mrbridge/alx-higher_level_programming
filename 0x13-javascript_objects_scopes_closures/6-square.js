@@ -2,18 +2,18 @@
 'use strict';
 const Square1 = require('./5-square.js');
 module.exports = class Square extends Square1 {
-  constructor (size) {
+  /*constructor (size) {
     super(size, size);
     this.size = size;
-  }
+  }*/
 
   charPrint (c) {
-    for (let i = 0; i < this.size; i++) {
-      if (c) {
-        console.log(c.repeat(this.size));
-      } else {
-        console.log('X'.repeat(this.size));
+    if (c) {
+      for (let i = 0; i < this.height; i++) {
+        console.log(c.repeat(this.width));
       }
+    } else {
+      this.print();
     }
   }
 };
