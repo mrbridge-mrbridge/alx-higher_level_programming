@@ -1,6 +1,6 @@
 #!/usr/bin/node
 'use scrict';
-module.export = class Rectangle {
+module.exports = class Rectangle {
   constructor(w, h) {
     this.width = w;
     this.heigth = h;
