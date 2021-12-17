@@ -1,11 +1,10 @@
 #!/usr/bin/node
 'use strict';
 exports.esrever = function (list) {
-  const j = list.lenght - 1;
-  for (let i = 0; i <= j; i++) {
-    let tmp = list[i];
-    list[i] = list[j-i];
-    list[j-i] = tmp;
+  const arr = [];
+  const j = list.length - 1;
+  for (let i = j; i >= 0; i--) {
+    arr.push(list[i]);
   }
-  console.log(list);
+  return arr;
 };
