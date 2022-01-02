@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-lists all State objects that contain the letter a from the database
-hbtn_0e_6_usa
+prints all City objects from the database hbtn_0e_14_usa
 You must use the module SQLAlchemy
+display as <state name>: (<city id>) <city name>
 """
 
 
@@ -20,7 +20,5 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     for city, state in session.query(City, State)\
-            .filter(City.state_id==State.id).order_by(City.id).all():
-            print('{}: ({}) {}'.format(
-                  state.name, city.id, city.name))
-
+            .filter(City.state_id == State.id).order_by(City.id).all():
+        print('{}: ({}) {}'.format(state.name, city.id, city.name))
