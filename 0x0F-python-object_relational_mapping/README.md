@@ -7,3 +7,7 @@
 * How to INSERT rows in a MySQL table from a Python script
 * What ORM means
 * How to map a Python Class to a MySQL table
+
+<img src='https://meterpreter.org/wp-content/uploads/2017/09/sqlalchemy-1.jpg' alt='ORM'/>
+
+<img src='https://www.mysqltutorial.org/wp-content/uploads/2014/10/mysql-python-connect.jpg' alt='ORM'/>
