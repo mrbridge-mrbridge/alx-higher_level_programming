@@ -13,6 +13,7 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 from relationship_state import Base, State
 from sqlalchemy.orm import relationship
 
+
 class City(Base):
     """class that represents a City in MySQL db"""
     __tablename__ = 'cities'
