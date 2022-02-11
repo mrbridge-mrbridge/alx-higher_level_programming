@@ -7,7 +7,7 @@ function wedgeAntilles (error, response, body) {
 
     for (const x of JSON.parse(body).results) {
       for (const y of x.characters) {
-        if (y === 'https://swapi-api.hbtn.io/api/people/18/') {
+        if (y.endsWith('/18/')) {
           count++;
         }
       }
